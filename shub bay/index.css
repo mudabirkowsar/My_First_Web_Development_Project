@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swao");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("watercolor-4117017_1280.png") no-repeat;
+    /* background: url("paper-1074131_1280.jpg") no-repeat; */
+    /* background-image: url("blue-1634110_1280.png"); */
+    /* background-image: url("bricks-459299_1280.jpg") no-repeat; */
+    background-size: cover;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    /* background: rgba(0, 0, 0, .1); */
+    /* backdrop-filter: blur(50px); */
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: 0.5s;
+}
+
+.header:hover::after {
+    left: 100%;
+}
+
+.imglogo {
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.logo {
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    color: rgb(68, 0, 255);
+}
+
+.navbar a {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.985);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    transition: 0.5s ease;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.595);
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media(max-width:768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: 0.4s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        transform: translateY(-50px);
+        text-align: center;
+        transition: 0.3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+    }
+
+}
+
+.color {
+    border: 2px solid red;
+}
+
+.homediv {
+    height: auto;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 87px;
+    display: flex;
+}
+
+
+p {
+    /* border: 2px solid green; */
+    width: 800px;
+    height: 200px;
+    margin-left: 322px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+
+.w {
+    color: red;
+}
+.b{
+    color: blue;
+}
+#welcome {
+    margin-top: 10px;
+}
+
+.homediv h1 {
+    /* border: 3px solid green; */
+    font-size: 80px;
+    font-weight: 400;
+    height: auto;
+    width: 400px;
+    margin-left: 30px;
+}
+
+#kashur {
+    width: 630px;
+}
+
+.welcometo {
+    /* border: 3px solid green; */
+    width: 70%;
+}
+
+.connection {
+    /* border: 2px solid red; */
+    width: 30%;
+}
+
+.subscribebtn {
+    width: 400px;
+    height: 50px;
+    margin-left: 513px;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 30px;
+    background: linear-gradient(90deg, rgb(235, 162, 162), rgb(106, 177, 193));
+    border-radius: 20px;
+    border: none;
+    transition: 2s ease;
+}
+
+.subscribebtn:hover {
+    transition: 2s ease;
+    background: linear-gradient(90deg, rgb(106, 177, 193), rgb(235, 162, 162));
+    color: red;
+    cursor: pointer;
+}
+
+.connection a {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    align-items: center;
+}
+
+.connection h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+
+.para {
+    border: 0.1px solid white;
+    /* height: 1000px; */
+    min-height: 100vh;
+    width: 100%;
+}
+
+.para h1 {
+    /* border: 2px solid red; */
+    margin-top: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.topvideopara {
+    margin-top: 70px;
+    font-size: 35px;
+}
+
+.videosinside {
+    display: flex;
+}
+
+.videos {
+    height: 300px;
+    width: 25%;
+    margin-left: 1%;
+    /* border: 2px solid red; */
+}
+
+.gal {
+    width: 100%;
+}
+
+.imagediv {
+    /* border: 2px solid green; */
+    height: 80%;
+    width: 100%;
+}
+
+.btn {
+    height: 40px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(90deg, rgb(227, 116, 116), rgb(235, 235, 95));
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, rgb(235, 235, 95), rgb(227, 116, 116));
+    color: blue;
+
+}
+
+.imagediv a img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.contactusbutton{
+    height: 50px;
+    width: 400px;
+    margin-left: 552px;
+    border: none;
+    border-radius: 30px;
+    font-size: 25px;
+    /* font-weight: bold; */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgb(130, 239, 130), rgb(241, 241, 123));
+    transition: 0.8s ease;
+}
+.contactusbutton:hover{
+    background: linear-gradient(90deg, rgb(241, 241, 123), rgb(130, 239, 130));
+    color: blue;
+}
+
+.mainservice{
+    display: flex;
+}
+.service{
+    height:482px;
+    width: 33.3%;
+    background-color: grey;
+    /* background: transparent; */
+    margin-left: 2%;
+    /* border: 3px solid red; */
+}
+#lastservice{
+    margin-right: 2%;
+}
+
+.video .videoediting{
+    font-weight: normal;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    background-color: rgba(149, 149, 238, 0.693);
+    background: transparent;
+}
+.paraediting {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 22px;
+    line-height:38px ;
+}
+.contactdiv{
+    /* border: 2px solid green; */
+    display: flex;
+    height: auto;
+    width: auto;
+}
+
+.contact{
+    width: 50%;
+    height: 500px;
+    margin-top: 30px;
+    margin-left: 30px;
+    /* border: 2px solid red; */
+}
+.socialmedia{
+    width: 50%;
+    height: 500px;
+    margin-top: 30px;
+    margin-left: 30px;
+    /* border: 2px solid yellow; */
+}
+.mediasocial{
+    margin-right: 30px;
+    display: inline-block;
+}
+.socialmedia h1{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.instalogo{
+    font-size: 35px;
+    color: red;
+    margin-left: 30px;
+    margin-top: 3px;
+}
+
+.mediasocial a {
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.fblogo{
+    margin-top: 30px;
+    color: blue;
+    margin-left: 30px;
+}
+
+.contact input{
+    width: 80%;
+    height: 50px;
+    margin-left: 10%;
+    background: transparent;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    /* color: blue; */
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.231);
+}
+
+.contact ::placeholder{
+    color: blue;
+}
+
+.contact .firsttextbox{
+    margin-top: 30px;
+}
+.contact a button{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.contact a button:hover{
+    background: linear-gradient(90deg, rgb(223, 130, 130), rgb(34, 72, 34));
+    transition: 0.5s;
+}
+
+.about1{
+    width: 100%;
+    height: 425px;
+    /* border: 2px solid green; */
+}
+.footer{
+    width: 100%;
+    height: 295px;
+    /* border: 2px solid red; */
+    background: linear-gradient(60deg,#4b637f,#6b315e);
+}
+
+.footer p{
+    /* background-color:  */
+    margin-top: 20px;
+    padding-top: 40px;
+}
+
+.footername{
+    height: 0px;
+}
+.bx{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-right: 20px;
+    color: black;
+    text-align: center;
+}
+.instawala{
+    margin-left: 620px;
+}
+.copy{
+    font-size: 20px;
+}
